@@ -5,65 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>a simple to-do list web application </title>
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,
-    regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,
-    700italic,800italic" 
-    rel="stylesheet"/>
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+    />
 </head>
 <body>
     <div class="container">
+
     <header>
         <h1>To Do List</h1>
+        <p id="date"></p>
     </header>
 
+        <!-- Todo Input -->
     <div class="input_todo">
-    <form class="to-do-input">
-        <input type="text" placeholder="add to-do">
-        <input type="date">
-    </form>
+        <input type="text" id="todo-add" placeholder="enter the task">
+        <input type="date" id="todo-date" placeholder="enter due date">
 
-    <div class="button">
+
+        <!-- Button Add -->
         <button type="button" id="addBtn">+</button>
     </div>
-    </div>
     
-    <div class="searach_filter">
-     <!-- Search bar -->
-    <div class="search">
-        <input 
-            type="text" 
-            placeholder="serach tasks">
-    </div>
-
     <!-- Filter -->
-    <div class="filter">
-        <label>Filter</label>
-        <select name="Filter">
-            <option value="All"> All Task</option>
-            <option value="Pending"> Pending Task</option>
-            <option value="Complete"> Complete Task</option>
-        </select>
-    </div>
+    <div class="filters">
+        <span class="filter alltask" data-filter="all">All Task</span>
+        <span class="filter" data-filter="pending">Pending</span>
+        <span class="filter" data-filter="complete">Complete</span>
     </div>
 
-    <!-- Delete Button -->
-    <div class="deleteButton">
-        <button type="reset" id="deleteBtn">Delete</button>
-    </div>
+    <div class="todos-container">
+        <ul id="todo-list">
+            <!-- List todos will be added dynamically here -->
+             <!-- <li class="todo-item">
+                <label class="checkbox-container">
+                    <input type="checkbox" class="todo-checkbox">
+                    <span class="checkmark"></span>
+                </label>
 
-    <!-- List Task -->
-     <div class="tasklist">
-        <h4>Task</h4>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+                    <span class="todo-text">Sample Task</span>
+                    <span class="todo-date">2024-06-30</span>
+                    <button class="delete-btn"><i class ='fas fa-times'></i></button>
+             </li> -->
         </ul>
-     </div>
+
+        <div class="empty-state hidden">
+            <i class="fas fa-clipboard-list"></i>
+            <p>No tasks available</p>
+        </div>
 
     </div>
-    
-     <footer>
+
+    <footer>
+        <p id="items-left">0 items left</p>
+        <button id="clear-task">Clear All Task</button>
+    </footer>
+     
+
+     <footer class="footer-author">
         <div class="author">
         <p>dibuat oleh
             <a href="https://github.com/Myobokuu" target="_blank">

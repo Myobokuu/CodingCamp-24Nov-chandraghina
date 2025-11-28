@@ -261,3 +261,15 @@ footer.footer-author {
     border-top: none;
     color: var(--gray);
 }
+
+.filter.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    font-weight: 600;
+}
+
+.filter.alltask:not(.active) {
+    color: var(--gray);
+    border-bottom: 2px solid transparent;
+    font-weight: normal;
+}
