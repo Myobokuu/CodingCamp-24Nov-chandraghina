@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a simple to-do list web application </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,
+    regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,
+    700italic,800italic" 
+    rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>To Do List</h1>
+    </header>
+
+    <div class="input_todo">
+    <form class="to-do-input">
+        <input type="text" placeholder="add to-do">
+        <input type="date">
+    </form>
+
+    <div class="button">
+        <button type="button" id="addBtn">+</button>
+    </div>
+    </div>
+    
+    <div class="searach_filter">
+     <!-- Search bar -->
+    <div class="search">
+        <input 
+            type="text" 
+            placeholder="serach tasks">
+    </div>
+
+    <!-- Filter -->
+    <div class="filter">
+        <label>Filter</label>
+        <select name="Filter">
+            <option value="All"> All Task</option>
+            <option value="Pending"> Pending Task</option>
+            <option value="Complete"> Complete Task</option>
+        </select>
+    </div>
+    </div>
+
+    <!-- Delete Button -->
+    <div class="deleteButton">
+        <button type="reset" id="deleteBtn">Delete</button>
+    </div>
+
+    <!-- List Task -->
+     <div class="tasklist">
+        <h4>Task</h4>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+     </div>
+
+    </div>
+    
+     <footer>
+        <div class="author">
+        <p>dibuat oleh
+            <a href="https://github.com/Myobokuu" target="_blank">
+                <b><i>ghina</i></b>
+            </a>
+        
+        </p>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>
